@@ -1,9 +1,0 @@
-{
-    "name": "EnemyRadar",
-    "version_number": "1.0.0",
-    "website_url": "https://github.com/gianramirez/EnemyRadar",
-    "description": "Displays red dots on the map for enemy locations and shows a live enemy count. Never get ambushed again.",
-    "dependencies": [
-        "BepInEx-BepInExPack-5.4.2100"
-    ]
-}

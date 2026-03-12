@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gian")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+403489346e28af3c8edb70f48784dfd1f1e0a823")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0480de61055ca4af5904eba64f6c2cf602eae97e")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnemyRadar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnemyRadar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
