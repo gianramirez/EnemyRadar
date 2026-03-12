@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Owner\\Documents\\REPOModding\\EnemyRadar\\EnemyRadar.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Owner\\Documents\\REPOModding\\EnemyRadar\\EnemyRadar.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Owner\\Documents\\REPOModding\\EnemyRadar\\EnemyRadar.csproj",
+        "projectName": "EnemyRadar",
+        "projectPath": "C:\\Users\\Owner\\Documents\\REPOModding\\EnemyRadar\\EnemyRadar.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\Documents\\REPOModding\\EnemyRadar\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.bepinex.dev/v3/index.json": {},
+          "https://nuget.bepinex.dev/v3/index.json": {},
+          "https://nuget.windows10ce.com/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "BepInEx.Analyzers": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.*, )"
+            },
+            "BepInEx.AssemblyPublicizer.MSBuild": {
+              "include": "Build",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.4.1, )"
+            },
+            "BepInEx.Core": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[5.*, )"
+            },
+            "R.E.P.O.GameLibs.Steam": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[*-*, )"
+            },
+            "UnityEngine.Modules": {
+              "include": "Compile",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2022.3.62, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\bin\Debug\netstandard2.1\EnemyRadar.deps.json
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\bin\Debug\netstandard2.1\EnemyRadar.dll
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.csproj.AssemblyReference.cache
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.AssemblyInfo.cs
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.dll
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\bin\Debug\netstandard2.1\EnemyRadar.pdb
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.pdb
