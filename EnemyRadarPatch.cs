@@ -25,7 +25,7 @@ static class EnemyRadarPatch
             }
 
         tex.Apply();
-        _enemySprite = Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), 20f);
+        _enemySprite = Sprite.Create(tex, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f), 80f);
         return _enemySprite;
     }
 

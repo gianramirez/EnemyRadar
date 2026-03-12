@@ -52,9 +52,14 @@ public class EnemyRadar : BaseUnityPlugin
             if (mapCustom == null) continue;
             if (mapCustom.mapCustomEntity == null) continue;
 
+            // Use the actual Enemy child transform instead of EnemyParent
+            Transform trackTransform = enemyParent.Enemy != null
+                ? enemyParent.Enemy.transform
+                : enemyParent.transform;
+
             Map.Instance.CustomPositionSet(
                 mapCustom.mapCustomEntity.transform,
-                enemyParent.transform
+                trackTransform
             );
         }
     }
