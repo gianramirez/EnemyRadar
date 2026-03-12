@@ -8,3 +8,4 @@ C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRa
 C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.dll
 C:\Users\Owner\Documents\REPOModding\EnemyRadar\bin\Debug\netstandard2.1\EnemyRadar.pdb
 C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.pdb
+C:\Users\Owner\Documents\REPOModding\EnemyRadar\obj\Debug\netstandard2.1\EnemyRadar.sourcelink.json
