@@ -36,16 +36,18 @@ static class EnemyRadarPatch
         if (EnemyDirector.instance == null) return;
         if (EnemyDirector.instance.enemiesSpawned == null) return;
 
+        int liveCount = 0;
+
         foreach (EnemyParent enemyParent in EnemyDirector.instance.enemiesSpawned)
         {
             if (enemyParent == null) continue;
             if (!enemyParent.Spawned) continue;
 
-            // Remove existing MapCustom to avoid duplicates
+            liveCount++;
+
             MapCustom existing = enemyParent.GetComponent<MapCustom>();
             if (existing != null) Object.Destroy(existing);
 
-            // Add fresh MapCustom
             MapCustom mapCustom = enemyParent.gameObject.AddComponent<MapCustom>();
             mapCustom.color = Color.red;
             mapCustom.sprite = GetEnemySprite();
@@ -59,5 +61,6 @@ static class EnemyRadarPatch
 
             EnemyRadar.Logger.LogInfo($"Drew red dot for {enemyParent.gameObject.name}");
         }
+        EnemyRadar.UpdateEnemyCountLabel(liveCount);
     }
 }

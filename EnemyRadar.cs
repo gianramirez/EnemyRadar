@@ -3,6 +3,7 @@ using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 namespace EnemyRadar;
 
@@ -14,16 +15,14 @@ public class EnemyRadar : BaseUnityPlugin
     private ManualLogSource _logger => base.Logger;
     internal Harmony? Harmony { get; set; }
 
+    private static GameObject? _countLabel;
+
     private void Awake()
     {
         Instance = this;
-
-        // Prevent the plugin from being deleted
         this.gameObject.transform.parent = null;
         this.gameObject.hideFlags = HideFlags.HideAndDontSave;
-
         Patch();
-
         Logger.LogInfo($"{Info.Metadata.GUID} v{Info.Metadata.Version} has loaded!");
     }
 
@@ -52,7 +51,6 @@ public class EnemyRadar : BaseUnityPlugin
             if (mapCustom == null) continue;
             if (mapCustom.mapCustomEntity == null) continue;
 
-            // Use the actual Enemy child transform instead of EnemyParent
             Transform trackTransform = enemyParent.Enemy != null
                 ? enemyParent.Enemy.transform
                 : enemyParent.transform;
@@ -82,5 +80,40 @@ public class EnemyRadar : BaseUnityPlugin
         {
             Logger.LogWarning($"Timed out waiting for mapCustomEntity on {enemyTransform.name}");
         }
+    }
+
+    internal static void UpdateEnemyCountLabel(int count)
+    {
+        if (_countLabel == null)
+        {
+            GameObject canvasGO = new GameObject("EnemyRadar_Canvas");
+            Object.DontDestroyOnLoad(canvasGO);
+            Canvas canvas = canvasGO.AddComponent<Canvas>();
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            canvas.sortingOrder = 100;
+            canvasGO.AddComponent<UnityEngine.UI.CanvasScaler>();
+            canvasGO.AddComponent<UnityEngine.UI.GraphicRaycaster>();
+
+            _countLabel = new GameObject("EnemyRadar_CountLabel");
+            _countLabel.transform.SetParent(canvasGO.transform, false);
+
+            TextMeshProUGUI tmp = _countLabel.AddComponent<TextMeshProUGUI>();
+            tmp.fontSize = 24;
+            tmp.color = Color.red;
+            tmp.fontStyle = FontStyles.Bold;
+
+            RectTransform rt = _countLabel.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0, 1);
+            rt.anchorMax = new Vector2(0, 1);
+            rt.pivot = new Vector2(0, 1);
+            rt.anchoredPosition = new Vector2(20f, -20f);
+            rt.sizeDelta = new Vector2(200f, 50f);
+        }
+
+        _countLabel.GetComponent<TextMeshProUGUI>().text = $"ENEMIES: {count}";
+        _countLabel.transform.parent.gameObject.SetActive(
+            Map.Instance != null && Map.Instance.Active
+        );
+        Logger.LogInfo($"Enemy count label updated: {count}");
     }
 }
